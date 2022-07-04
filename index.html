@@ -4,232 +4,519 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>하이미디어 - HiMEDIA</title>
-    <!-- FAVICON -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <!-- Google Fonts -->
+    <title>Clone Site - 롯데투어</title>
+    <!-- CSS Base -->
+    <link rel="stylesheet" href="css/reset.css" class="css">
+    <link rel="stylesheet" href="css/general.css" class="css">
+
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.css" integrity="sha512-303pOWiYlJMbneUN488MYlBISx7PqX8Lo/lllysH56eKO8nWIMEMGRHvkZzfXYrHj4j4j5NtBuWmgPnkLlzFCg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.min.js" integrity="sha512-Hvn3pvXhhG39kmZ8ue3K8hw8obT4rfLXHE5n+IWNCMkR6oV3cfkQNUQqVvX3fNJO/JtFeo/MfLmqp5bqAT+8qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Google Fonts: Noto Sans KR -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
-    <!-- CSSs -->
-    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- page CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/mobile.css">
 </head>
 <body>
-    <!-- header -->
-    <header class="hder_wrap">
-        <div class="upper_wrap">
-            <div class="util_wrap">
-                <nav class="util cleanfloat">
-                    <ul class="cleanfloat">
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Join</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">English</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-        <div class="title_wrap">
-            <div class="title">
-                <h1><a href="#">하이미디어</a></h1>
-                <div class="toggle_starter_btn_wrap">
-                    <div class="toggle_starter_btn"></div>
-                    <div class="toggle_starter_btn"></div>
-                    <div class="toggle_starter_btn"></div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <!-- HEADER -->
+    <?php
+        include "./include/header.html";
+    ?>
 
-    <!-- gnb -->
-    <div class="gnb_wrap">
-        <nav class="gnb">
-            <ul class="cleanfloat">
-                <li><a href="#">MENU1</a></li>
-                <li><a href="#">MENU2</a></li>
-                <li><a href="#">MENU3</a></li>
-                <li><a href="#">MENU4</a></li>
-                <li><a href="#">MENU5</a></li>
-                <li><a href="#">MENU6</a></li>
-            </ul>
-        </nav>
-    </div>
+    <!-- MAIN SECTION -->
+    <section id="section-main">
+        
+        <div class="wrap-section-main actualWorkspace">
 
-    <!-- crucial banner -->
-    <div class="visual_wrap">
-        <div class="visual">
-            <div class="visual_text">
-                <h2>NEXT<br>ENERGY</h2>
-                <p>하이미디어는 친환경 에너지 기술을 선도하여<br>미래를 향해 도약하고 자랍니다.</p>
+            <!-- SECTION ROW FIRST -->
+            <div class="section-row-first">
+                <div class="section-row-first-left">
+                    <div class="swiper wrap-form-board">
+                        <div class="swiper-pagination"></div>
+
+                        <!-- SCRIPT ATTACHED, SEE THE VERY BOTTOM OF THE BODY -->
+                        <!-- SCRIPT ATTACHED, SEE THE VERY BOTTOM OF THE BODY -->
+
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="form-board">
+                                    <form action="#">
+                                        <fieldset>
+                                            <label for="select-country-01">가고싶은 나라를 선택하세요</label>
+                                            <select name="selectcountry" id="select-country-01">
+                                                <option value="">선택하세요</option>
+                                                <option value="국내">국내</option>
+                                                <option value="미국">미국</option>
+                                                <option value="일본">일본</option>
+                                                <option value="중국">중국</option>
+                                            </select>
+                                        </fieldset>
+                                        <fieldset class="clearfix">
+                                            <div class="float-left">
+                                                <label for="date-leave-01">출발일</label>
+                                                <input type="text" id="date-leave-01" name="dateleave">
+                                            </div>
+                                            <div class="float-right">
+                                                <label for="date-return-01">귀국일</label>
+                                                <input type="text" id="date-return-01" name="datereturn">
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="clearfix">
+                                            <div class="float-left">
+                                                <label for="seat-tier-01">좌석등급</label>
+                                                <select name="seattier" id="seat-tier-01">
+                                                    <option value="">선택하세요</option>
+                                                    <option value="economy-01">이코노미</option>
+                                                    <option value="business-01">비즈니스</option>
+                                                    <option value="first-class-01">퍼스트 클래스</option>
+                                                </select>
+                                            </div>
+                                            <div class="float-right clearfix">
+                                                <div class="float-left">
+                                                    <label for="passenger-adult-01">성인</label>
+                                                    <input type="number" name="passengeradult" id="passenger-adult-01">
+                                                </div>
+                                                <div class="float-right">
+                                                    <label for="passenger-child-01">아이</label>
+                                                    <input type="number" name="passengerchild" id="passenger-child-01">
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <button class="theme-red fonts-white fonts-medium">검색하기</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="form-board">
+                                    <form action="#">
+                                        <fieldset>
+                                            <label for="select-country-02">가고싶은 나라를 선택하세요</label>
+                                            <select name="selectcountry" id="select-country-02">
+                                                <option value="">선택하세요</option>
+                                                <option value="국내">국내</option>
+                                                <option value="미국">미국</option>
+                                                <option value="일본">일본</option>
+                                                <option value="중국">중국</option>
+                                            </select>
+                                        </fieldset>
+                                        <fieldset class="clearfix">
+                                            <div class="float-left">
+                                                <label for="date-leave-02">출발일</label>
+                                                <input type="text" id="date-leave-02" name="dateleave">
+                                            </div>
+                                            <div class="float-right">
+                                                <label for="date-return-02">귀국일</label>
+                                                <input type="text" id="date-return-02" name="datereturn">
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="clearfix">
+                                            <div class="float-left">
+                                                <label for="seat-tier-02">좌석등급</label>
+                                                <select name="seattier" id="seat-tier-02">
+                                                    <option value="">선택하세요</option>
+                                                    <option value="economy-02">이코노미</option>
+                                                    <option value="business-02">비즈니스</option>
+                                                    <option value="first-class-02">퍼스트 클래스</option>
+                                                </select>
+                                            </div>
+                                            <div class="float-right clearfix">
+                                                <div class="float-left">
+                                                    <label for="passenger-adult-02">성인</label>
+                                                    <input type="number" name="passengeradult" id="passenger-adult-02">
+                                                </div>
+                                                <div class="float-right">
+                                                    <label for="passenger-child-02">아이</label>
+                                                    <input type="number" name="passengerchild" id="passenger-child-02">
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <button class="theme-red fonts-white fonts-medium">검색하기</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="form-board">
+                                    <form action="#">
+                                        <fieldset>
+                                            <label for="select-country-03">가고싶은 나라를 선택하세요</label>
+                                            <select name="selectcountry" id="select-country-03">
+                                                <option value="">선택하세요</option>
+                                                <option value="국내">국내</option>
+                                                <option value="미국">미국</option>
+                                                <option value="일본">일본</option>
+                                                <option value="중국">중국</option>
+                                            </select>
+                                        </fieldset>
+                                        <fieldset class="clearfix">
+                                            <div class="float-left">
+                                                <label for="date-leave-03">출발일</label>
+                                                <input type="text" id="date-leave-03" name="dateleave">
+                                            </div>
+                                            <div class="float-right">
+                                                <label for="date-return-03">귀국일</label>
+                                                <input type="text" id="date-return-03" name="datereturn">
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="clearfix">
+                                            <div class="float-left">
+                                                <label for="seat-tier-03">좌석등급</label>
+                                                <select name="seattier" id="seat-tier-03">
+                                                    <option value="">선택하세요</option>
+                                                    <option value="economy-03">이코노미</option>
+                                                    <option value="business-03">비즈니스</option>
+                                                    <option value="first-class-03">퍼스트 클래스</option>
+                                                </select>
+                                            </div>
+                                            <div class="float-right clearfix">
+                                                <div class="float-left">
+                                                    <label for="passenger-adult-03">성인</label>
+                                                    <input type="number" name="passengeradult" id="passenger-adult-03">
+                                                </div>
+                                                <div class="float-right">
+                                                    <label for="passenger-child-03">아이</label>
+                                                    <input type="number" name="passengerchild" id="passenger-child-03">
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <button class="theme-red fonts-white fonts-medium">검색하기</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="form-board">
+                                    <form action="#">
+                                        <fieldset>
+                                            <label for="select-country-04">가고싶은 나라를 선택하세요</label>
+                                            <select name="selectcountry" id="select-country-04">
+                                                <option value="">선택하세요</option>
+                                                <option value="국내">국내</option>
+                                                <option value="미국">미국</option>
+                                                <option value="일본">일본</option>
+                                                <option value="중국">중국</option>
+                                            </select>
+                                        </fieldset>
+                                        <fieldset class="clearfix">
+                                            <div class="float-left">
+                                                <label for="date-leave-04">출발일</label>
+                                                <input type="text" id="date-leave-04" name="dateleave">
+                                            </div>
+                                            <div class="float-right">
+                                                <label for="date-return-04">귀국일</label>
+                                                <input type="text" id="date-return-04" name="datereturn">
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="clearfix">
+                                            <div class="float-left">
+                                                <label for="seat-tier-04">좌석등급</label>
+                                                <select name="seattier" id="seat-tier-04">
+                                                    <option value="">선택하세요</option>
+                                                    <option value="economy-04">이코노미</option>
+                                                    <option value="business-04">비즈니스</option>
+                                                    <option value="first-class-04">퍼스트 클래스</option>
+                                                </select>
+                                            </div>
+                                            <div class="float-right clearfix">
+                                                <div class="float-left">
+                                                    <label for="passenger-adult-04">성인</label>
+                                                    <input type="number" name="passengeradult" id="passenger-adult-04">
+                                                </div>
+                                                <div class="float-right">
+                                                    <label for="passenger-child-04">아이</label>
+                                                    <input type="number" name="passengerchild" id="passenger-child-04">
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <button class="theme-red fonts-white fonts-medium">검색하기</button>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <script>
+                                $(function() {
+                                    $('#date-leave-01').datepicker({
+                                        dateFormat: "yy/mm/dd",
+                                    });
+                                    $('#date-return-01').datepicker({
+                                        dateFormat: "yy/mm/dd",
+                                    });
+                                    $('#date-leave-02').datepicker({
+                                        dateFormat: "yy/mm/dd",
+                                    });
+                                    $('#date-return-02').datepicker({
+                                        dateFormat: "yy/mm/dd",
+                                    });
+                                    $('#date-leave-03').datepicker({
+                                        dateFormat: "yy/mm/dd",
+                                    });
+                                    $('#date-return-03').datepicker({
+                                        dateFormat: "yy/mm/dd",
+                                    });
+                                    $('#date-leave-04').datepicker({
+                                        dateFormat: "yy/mm/dd",
+                                    });
+                                    $('#date-return-04').datepicker({
+                                        dateFormat: "yy/mm/dd",
+                                    });
+                                });
+                            </script>
+                        </div>
+                    </div>
+
+                    <script>
+                        var swiper00 = new Swiper('.wrap-form-board', {
+                            direction: 'vertical',
+                            mousewheel: false,
+                            allowTouchMove: false,
+                            pagination: {
+                                el: '.swiper-pagination',
+                                clickable: 'true',
+                            },
+                        });
+                    </script>
+
+                    <div class="popular-location position-re">
+                        <ul>
+                            <li class="position-re" style="background-image: url(img/03travel01.jpg)">
+                                <div class="container-text fonts-white">
+                                    <a href="#">스페인 <span style="color: rgb(135, 118, 105); ">&#8361;1,900,000~</span></a>
+                                    <div class="container-img"><img src="img/btn-detailpage.png" alt=""></div>
+                                </div>
+                            </li>
+                            <li class="position-re" style="background-image: url(img/03travel02.png)">
+                                <div class="container-text fonts-white">
+                                    <a href="#">베트남 <span style="color: rgb(135, 118, 105);">&#8361;890,000~</span></a>
+                                    <div class="container-img"><img src="img/btn-detailpage.png" alt=""></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section-row-first-right position-re">
+                    <div class="container-text fonts-dark">
+                        <h2 class="fonts-headline">그랜드 하얏트 호텔</h2>
+                        <p class="fonts-medium fonts-headline-sub">
+                            롯데 관광이 만든<br>
+                            <span class="fonts-red"><span class="fonts-bold">그랜드 하얏트 제주</span> OPEN</span>
+                        </p>
+                    </div>
+                    <div class="decorations position-re">
+                        <div class="container-img position-ab">
+                            <img src="img/reallyAir3.png" alt="여객기" style="width: 33%;">
+                        </div>
+                        <div class="container-img position-ab">
+                            <img src="img/02balloon.png" alt="열기구들1">
+                        </div>
+                        <div class="container-img position-ab">
+                            <img src="img/content1.png" alt="열기구들2" style="width: 108%;">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="visual_attach">
-                <img src="images/main_slider_img.png" alt="밝게 불이 들어온 백열전구-투명도있음">
+
+            <!-- SECTION ROW SECOND -->
+            <div class="section-row-second">
+                <div class="container-content swiper recommendation-hotel">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image: url(img/03travel03.jpg);">
+                            <div class="container-text">
+                                <h3 class=" fonts-white fonts-medium fonts-article">코타키나발루 (말레이시아)</h3>
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" style="background-image: url(img/03travel03-2.jpg);">
+                            <div class="container-text">
+                                <h3 class=" fonts-white fonts-medium fonts-article">산토리니 여행 (그리스)</h3>
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" style="background-image: url(img/03travel03-3.jpg);">
+                            <div class="container-text">
+                                <h3 class=" fonts-white fonts-medium fonts-article">이스탄불 패키지 (터키)</h3>
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next next-hotel"></div>
+                    <div class="swiper-button-prev prev-hotel"></div>
+                </div>
+                <div class="container-content swiper recommendation-landmark">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image: url(img/03travel04.jpg);">
+                            <div class="container-text">
+                                <h3 class=" fonts-white fonts-medium fonts-article">디즈니랜드 당일치기</h3>
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" style="background-image: url(img/03travel04-2.jpg);">
+                            <div class="container-text">
+                                <h3 class=" fonts-white fonts-medium fonts-article">사이판 골프투어</h3>
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide" style="background-image: url(img/03travel04-3.png);">
+                            <div class="container-text">
+                                <h3 class=" fonts-white fonts-medium fonts-article">지중해 크루즈</h3>
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next next-landmark"></div>
+                    <div class="swiper-button-prev prev-landmark"></div>
+                </div>
+
+                <script>
+                    var swiper01 = new Swiper('.recommendation-hotel', {
+                        navigation: {
+                            nextEl: '.next-hotel',
+                            prevEl: '.prev-hotel',
+                        },
+                        loop: true,
+                    });
+
+                    var swiper02 = new Swiper('.recommendation-landmark', {
+                        navigation: {
+                            nextEl: '.next-landmark',
+                            prevEl: '.prev-landmark',
+                        },
+                        loop: true,
+                    });
+                </script>
+
+                <div class="container-content position-re" style="background-image: url(img/03travel05.jpg);">
+                    <p class="fonts-white fonts-title fonts-regular" style="text-align: center; padding: 1em 0;">TOKYO</p>
+                    <div class="container-text">
+                        <p class="fonts-description fonts-white">20°C 구름조금<br><span class="fonts-thin" style="font-size: 0.9375em;">습도 60% 바람 남남동 2m/s</span></p>
+                    </div>
+                </div>
+                <div class="container-content position-re" style="background-image: url(img/03travel06.jpg);">
+                    <div class="review">
+                        <p class="fonts-description">"코로나 끝나고 오랜만에 제주도를 갔는데 너무 만족스러웠습니다. 롯데투어 짱!"</p>
+                        <span class="fonts-smallest" style="color: #1b85e7;">제주도 자유관광</span>
+                        <div class="stars fonts-smallest">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="container-text">
+                        <p class="fonts-article fonts-white">facebook 여행후기<br><span>(임정희님)</span></p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
 
-    <!-- belt icon -->
-    <div class="belt_wrap">
-        <ul class="belt cleanfloat">
-            <li>
-                <div class="belt_icon">
-                    <img src="images/icon01.png" alt="태양 픽토그램">
-                </div>
-                <div class="belt_text">
-                    <h3>사회공헌</h3>
-                    <p>소외된 이웃과 함께합니다.</p>
-                </div>
-            </li>
-            <li>
-                <div class="belt_icon">
-                    <img src="images/icon02.png" alt="펼쳐진 책 픽토그램">
-                </div>
-                <div class="belt_text">
-                    <h3>윤리경영</h3>
-                    <p>공정한 경쟁을 추구합니다.</p>
-                </div>
-            </li>
-            <li>
-                <div class="belt_icon">
-                    <img src="images/icon03.png" alt="사람 픽토그램">
-                </div>
-                <div class="belt_text">
-                    <h3>인재채용</h3>
-                    <p>열정 넘치는 인재를 모십니다.</p>
-                </div>
-            </li>
-            <li>
-                <div class="belt_icon">
-                    <img src="images/icon04.png" alt="지구 픽토그램">
-                </div>
-                <div class="belt_text">
-                    <h3>기업문화</h3>
-                    <p>유자의 가치를 소개합니다.</p>
-                </div>
-            </li>
-            <li>
-                <div class="belt_icon">
-                    <img src="images/icon05.png" alt="막대그래프 픽토그램">
-                </div>
-                <div class="belt_text">
-                    <h3>비전</h3>
-                    <p>유자는 미래를 선도합니다.</p>
-                </div>
-            </li>
-        </ul>
-    </div>
+            <!-- SECTION ROW THIRD -->
+            <!-- NEED onClick="location.href='~~~.html'" -->
 
-    <!-- card section -->
-    <section class="card_wrap">
-        <div class="card_group sc01">
-            <ul class="cleanfloat">
-                <li class="card">
-                    <div class="card_img">
-                        <img src="images/content_img01.png" alt="하얀 구름이 있는 청명한 하늘 사진">
+            <div class="section-row-third position-re">
+                <div class="container-content" style="background-image: url(img/03travel07.jpg);">
+                    <div class="transparent-sheet position-re">
+                        <div class="container-text position-ab fonts-white">
+                            <h2 class="fonts-title fonts-bold"><img src="img/individual-snorkel.png" alt="">여행정보</h2>
+                            <p>여행 중에 알아두면 좋은<br>
+                            상세한 정보를 볼 수 있습니다.</p>
+                        </div>
+                        <div class="btn"></div>
                     </div>
-                    <div class="card_text">
-                        <h3>회사 개요</h3>
-                        <p>
-                            유자에너지는 태양열발전 등 그린에너지와 바이오 사업을 통해 신성장동력을 강화하고 있습니다다다다다다다다다다
-                        </p>
+                </div>
+                <div class="container-content" style="background-image: url(img/03travel08.jpg);">
+                    <div class="transparent-sheet position-re">
+                        <div class="btn"></div>
+                        <div class="container-text position-ab fonts-white">
+                            <h2 class="fonts-title fonts-bold"><img src="img/individual-ramen.png" alt="">맛집정보</h2>
+                            <p>여행지의 별난 맛집들을<br>
+                            모아두었습니다.</p>
+                        </div>
                     </div>
-                </li>
-                <li class="card">
-                    <div class="card_img">
-                        <img src="images/content_img02.png" alt="하얀 구름이 있는 청명한 하늘 사진">
+                </div>
+                <div class="container-content" style="background-image: url(img/03travel09.jpg);">
+                    <div class="transparent-sheet position-re">
+                        <div class="btn"></div>
+                        <div class="container-text position-ab fonts-white">
+                            <h2 class="fonts-title fonts-bold"><img src="img/individual-house.png" alt="">현지뉴스</h2>
+                            <p>핵심 현지 뉴스들을<br>
+                            한글로 보실 수 있습니다.</p>
+                        </div>
                     </div>
-                    <div class="card_text">
-                        <h3>사업분야</h3>
-                        <p>
-                            풍부한 경험과 최고의 기술력으로 새로운 미래를 열어갑니다. 장기적인 비전을 통한 끊임없는 성장장장장장장장장장장장
-                        </p>
+                </div>
+                <div class="container-content" style="background-image: url(img/03travel10.jpg);">
+                    <div class="transparent-sheet position-re">
+                        <div class="container-text position-ab fonts-white">
+                            <h2 class="fonts-title fonts-bold"><img src="img/individual-thumbup.png" alt="">세계행사</h2>
+                            <p>현지의 이색 행사들을<br>
+                            놓치지 마십시오!</p>
+                        </div>
+                        <div class="btn"></div>
                     </div>
-                </li>
-                <li class="card">
-                    <div class="card_img">
-                        <img src="images/content_img03.png" alt="하얀 구름이 있는 청명한 하늘 사진">
-                    </div>
-                    <div class="card_text">
-                        <h3>환경경영</h3>
-                        <p>
-                            유자에너지는 태양열발전 등 그린에너지와 바이오 사업을 통해 신성장동력을 강화하고 있습니다.
-                        </p>
-                    </div>
-                </li>
-            </ul>
+                </div>
+            </div>
+
         </div>
-        <div class="card_group sc02">
-            <ul class="cleanfloat">
-                <li class="card">
-                    <div class="card_img">
-                        <img src="images/content_icon01.png" alt="하얀 구름이 있는 청명한 하늘 사진">
-                    </div>
-                    <div class="card_text">
-                        <h3>사보</h3>
-                        <p>
-                            풍부한 경험과 최고의 기술력으로 새로운 미래를 열어갑니다.
-                        </p>
-                        <a href="#">자세히보기→</a>
-                    </div>
-                </li>
-                <li class="card">
-                    <div class="card_img">
-                        <img src="images/content_icon02.png" alt="하얀 구름이 있는 청명한 하늘 사진">
-                    </div>
-                    <div class="card_text">
-                        <h3>찾아오시는 길</h3>
-                        <p>
-                            풍부한 경험과 최고의 기술력으로 새로운 미래를 열어갑니다.
-                        </p>
-                        <a href="#">자세히보기→</a>
-                    </div>
-                </li>
-                <li class="card">
-                    <div class="card_img">
-                        <img src="images/content_icon03.png" alt="하얀 구름이 있는 청명한 하늘 사진">
-                    </div>
-                    <div class="card_text">
-                        <h3>제품정보</h3>
-                        <p>
-                            풍부한 경험과 최고의 기술력으로 새로운 미래를 열어갑니다.
-                        </p>
-                        <a href="#">자세히보기→</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
+
     </section>
 
-    <!-- footer -->
-    <footer>
-        <div class="footer_upper_wrap">
-            <div class="footer_upper">
-                <nav class="footer_btn cleanfloat">
-                    <ul class="cleanfloat">
-                        <li><a href="#">개인정보 취급방침</a></li>
-                        <li><a href="#">이메일주소 무단 수집 거부</a></li>
-                        <li><a href="#">패밀리 사이트</a></li>
-                    </ul>
-                    <div class="footer_top_jump">
-                        <a href="#"><img src="images/Arrow_Direction-Up.png" alt="상단으로"></a>
-                    </div>
-                </nav>
-            </div>
-        </div>
-        <div class="footer_lower_wrap">
-            <div class="footer_lower">
-                <div class="footer_lower_text cleanfloat">
-                    <h3>하이미디어</h3>
-                    <p>
-                        대표 : 홍길동 사업자등록번호 : 000-00-0000 주소 : 서울시 영등포구 여의도동 1234567<br>
-                        TEL : 02-0000-0000 FAX : 02-0000-0000 E-mail : abcde@abcde.com<br>
-                        Copyright(c)2015. himedia. All right reserved.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- FOOTER -->
+    <!-- FOOTER UPPER -->
+
+    <?php
+        include "./include/footer.html";
+    ?>
+    
+    <script>
+        document.querySelectorAll('.section-row-first .swiper-pagination-bullet')[0].innerHTML = `<i class="fa-solid fa-plane"></i> &nbsp;`;
+        document.querySelectorAll('.section-row-first .swiper-pagination-bullet')[1].innerHTML = `<i class="fa-solid fa-computer-mouse"></i> &nbsp;`;
+        document.querySelectorAll('.section-row-first .swiper-pagination-bullet')[2].innerHTML = `<i class="fa-solid fa-car"></i> &nbsp;`;
+        document.querySelectorAll('.section-row-first .swiper-pagination-bullet')[3].innerHTML = `<i class="fa-solid fa-umbrella-beach"></i> &nbsp;`;
+    </script>
 </body>
 </html>

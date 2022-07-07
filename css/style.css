@@ -17,6 +17,10 @@ body {
     display: flex; justify-content: space-between; align-items: center;
 }
 
+#header .wrap-upper-header .upper-header h1 img {
+    display: block;
+}
+
 #header .wrap-upper-header .upper-header .social-site img {
     width: 32px;
 }
@@ -59,6 +63,8 @@ body {
     width: calc(980px / 5);
     height: 48px;
     border-left: 1px solid #76807c56;
+
+    transition: 0.22s;
 }
 
 #header .wrap-lower-header .lower-header .gnb > ul > li:hover,
@@ -92,7 +98,8 @@ body {
 #header .wrap-lower-header .lower-header .gnb > ul > li .submenu ul {
     display: flex; justify-content: center; gap: 28px;
     font-weight: 100;
-    /* color: #333333; */
+    color: #FFFFFF;
+    transition: initial;
 }
 
 #header .wrap-lower-header .lower-header .gnb > ul > li .submenu ul li {
@@ -138,6 +145,7 @@ body {
 .container-content {
     width: 25%;
     height: 216px;
+    cursor: pointer;
 }
 
 .popular-location>ul>li,
@@ -174,7 +182,7 @@ body {
 
 #section-main .section-row-first-right .decorations .container-img:nth-child(1) {
     top: 450px;
-    right: -700px;
+    right: -660px;
     z-index: 0;
 
     animation-name: flying_Airplane;
@@ -557,10 +565,6 @@ body {
 }
 
 /* FOOTER UPPER LEFT */
-#footer .footer-upper-left {
-    /* float: left */
-}
-
 #footer .footer-upper-left .footer-emblem {
     display: flex; align-items: center; gap: 8px;
     margin-bottom: 4px;
@@ -611,8 +615,20 @@ body {
 
 
 /* SUBPAGES */
-#section-sub.domestic-trip .visual {
-    background-image: url(../img/screensheet_black.png), url(../img/subimg01.jpg);
+#section-sub.subpage .visual {
+    padding: 140px 0;
+}
+
+#section-sub.subpage .visual .container-text {
+    visibility: hidden;
+}
+
+#section-sub.subpage.company .visual .container-text {
+    visibility: visible;
+}
+
+#section-sub.subpage.company .visual {
+    /* background-image: url(../img/screensheet_black.png), url(../img/subimg01.jpg); */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -620,11 +636,11 @@ body {
     padding: 100px 0 100px;
 }
 
-#section-sub.domestic-trip .content {
+#section-sub.subpage .content {
     padding-bottom: 50px;
 }
 
-#section-sub.domestic-trip .content .wrap-content {
+#section-sub.subpage .content .wrap-content {
     border-top: 4px solid rgb(218, 41, 28);
     border-bottom: 4px solid rgb(218, 41, 28);
 
@@ -634,22 +650,60 @@ body {
     /* gap: 16px; */
 }
 
-#section-sub.domestic-trip .content .wrap-content .site-location {
+#section-sub.subpage .content .wrap-content .site-location {
     right: 32px;
     top: 32px;
 }
 
-#section-sub.domestic-trip .content .wrap-content .site-location p a {
+#section-sub.subpage .content .wrap-content .site-location p a {
     text-decoration: underline;
     color: #4168e7;
 }
 
-/* #section-sub.domestic-trip .content .wrap-content .container-content,
-#section-sub.domestic-trip .content .wrap-content .container-img {
-    width: 50%;
-} */
-
-#section-sub.domestic-trip .content .wrap-content .container-img img {
+#section-sub.subpage .content .wrap-content .container-img img {
     display: block;
     margin: 0 auto;
 }
+
+/* SUBPAGE - COMPANY */
+
+/* SUBPAGE - DOMESITC TOUR */
+#section-sub.subpage.domestic-tour .content .wrap-content.actualWorkspace,
+#section-sub.subpage.outland-tour .content .wrap-content.actualWorkspace,
+#section-sub.subpage.jeju-tour .content .wrap-content.actualWorkspace,
+#section-sub.subpage.reservation .content .wrap-content.actualWorkspace {
+    width: 1200px;
+    padding-top: 64px;
+}
+
+#section-sub.subpage.domestic-tour .content .wrap-content .container-img,
+#section-sub.subpage.outland-tour .content .wrap-content .container-img,
+#section-sub.subpage.jeju-tour .content .wrap-content .container-img,
+#section-sub.subpage.reservation .content .wrap-content .container-img {
+    margin-bottom: 64px;
+}
+
+#section-sub.subpage.domestic-tour .content .wrap-content .container-img:last-child,
+#section-sub.subpage.outland-tour .content .wrap-content .container-img:last-child,
+#section-sub.subpage.jeju-tour .content .wrap-content .container-img:last-child,
+#section-sub.subpage.reservation .content .wrap-content .container-img:last-child {
+    margin-bottom: 0;
+}
+
+#section-sub.subpage.domestic-tour .content .wrap-content .container-img:nth-child(3),
+#section-sub.subpage.outland-tour .content .wrap-content .container-img:last-child,
+#section-sub.subpage.jeju-tour .content .wrap-content .container-img:last-child,
+#section-sub.subpage.reservation .content .wrap-content .container-img:nth-child(3) {
+    left: -32px;
+    width: 1200px;
+    background-color: #F6F6F6;
+}
+
+/* SUBPAGE - OUTLAND TOUR */
+#section-sub.subpage.outland-tour .content .wrap-content .container-img:last-child,
+#section-sub.subpage.jeju-tour .content .wrap-content .container-img:last-child,
+#section-sub.subpage.reservation .content .wrap-content .container-img:nth-child(3) {
+    padding: 32px 0;
+}
+
+/* SUBPAGE - JEJU TOUR */

@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    웹 퍼블리싱 연습용으로 제작된 페이지입니다. 공식과 무관합니다!
     <!-- HEADER -->
     <?php
         include "./include/header.html";
@@ -291,13 +292,13 @@
                         <ul>
                             <li class="position-re" style="background-image: url(img/03travel01.jpg)">
                                 <div class="container-text fonts-white">
-                                    <a href="#">스페인 <span style="color: rgb(135, 118, 105); ">&#8361;1,900,000~</span></a>
+                                    <a href="outland_tour.html">스페인 <span style="color: rgb(135, 118, 105); ">&#8361;1,900,000~</span></a>
                                     <div class="container-img"><img src="img/btn-detailpage.png" alt=""></div>
                                 </div>
                             </li>
                             <li class="position-re" style="background-image: url(img/03travel02.png)">
                                 <div class="container-text fonts-white">
-                                    <a href="#">베트남 <span style="color: rgb(135, 118, 105);">&#8361;890,000~</span></a>
+                                    <a href="outland_tour.html">베트남 <span style="color: rgb(135, 118, 105);">&#8361;890,000~</span></a>
                                     <div class="container-img"><img src="img/btn-detailpage.png" alt=""></div>
                                 </div>
                             </li>
@@ -320,7 +321,7 @@
                             <img src="img/02balloon.png" alt="열기구들1">
                         </div>
                         <div class="container-img position-ab">
-                            <img src="img/content1.png" alt="열기구들2" style="width: 108%;">
+                            <img src="img/content1.png" alt="열기구들2" style="width: 128%;">
                         </div>
                     </div>
                 </div>
@@ -513,10 +514,36 @@
     ?>
     
     <script>
+        // formboard icons
         document.querySelectorAll('.section-row-first .swiper-pagination-bullet')[0].innerHTML = `<i class="fa-solid fa-plane"></i> &nbsp;`;
         document.querySelectorAll('.section-row-first .swiper-pagination-bullet')[1].innerHTML = `<i class="fa-solid fa-computer-mouse"></i> &nbsp;`;
         document.querySelectorAll('.section-row-first .swiper-pagination-bullet')[2].innerHTML = `<i class="fa-solid fa-car"></i> &nbsp;`;
         document.querySelectorAll('.section-row-first .swiper-pagination-bullet')[3].innerHTML = `<i class="fa-solid fa-umbrella-beach"></i> &nbsp;`;
+
+        // pointer cursor initialization
+        document.querySelectorAll('.section-row-second .container-content')[2].style.cursor = 'initial';
+        document.querySelectorAll('.section-row-second .container-content')[3].style.cursor = 'initial';
+
+        // locating sites w/o <a> tag
+        const hotelSlide = document.querySelectorAll('.section-row-second .recommendation-hotel .swiper-slide');
+        const landmarkSlide = document.querySelectorAll('.section-row-second .recommendation-landmark .swiper-slide');
+
+        for (let a = 0; a < hotelSlide.length; a++){
+            hotelSlide[a].addEventListener('click', function(){
+                window.location.href='outland_tour.html';
+            });
+        };
+
+        for (let a = 0; a < landmarkSlide.length; a++){
+            landmarkSlide[a].addEventListener('click', function(){
+                window.location.href='outland_tour.html';
+            });
+        };
+
+        document.querySelectorAll('.section-row-third .container-content')[0].addEventListener('click', function(){window.location.href = 'outland_tour.html'});
+        document.querySelectorAll('.section-row-third .container-content')[1].addEventListener('click', function(){window.location.href = 'domestic_tour.html'});
+        document.querySelectorAll('.section-row-third .container-content')[2].addEventListener('click', function(){window.location.href = 'jeju_tour.html'});
+        document.querySelectorAll('.section-row-third .container-content')[3].addEventListener('click', function(){window.location.href = 'reservation.html'});
     </script>
 </body>
 </html>
